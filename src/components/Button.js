@@ -7,12 +7,10 @@ const ButtonStyle = styled.button`
 	border: none;
 	background-color: #00a870;
 	color: #ffffff;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 20px;
 	text-align: center;
 	text-decoration: none;
-	padding: 12px 21px
+	padding: 12px 21px;
+	cursor: pointer;
 `;
 
 function Button(props) {

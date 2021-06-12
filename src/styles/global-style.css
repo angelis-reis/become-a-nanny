@@ -102,7 +102,6 @@ section {
 }
 body {
 	line-height: 1;
-	
 }
 ol,
 ul {
@@ -122,4 +121,29 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 48px;
+	letter-spacing: -1px;
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 32px;
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 32px;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
 }

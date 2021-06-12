@@ -5,22 +5,16 @@ import Badge from '../../utils/Badge.svg';
 import Button from '../Button';
 
 const HeaderStyle = styled.div`
-	/* background-color: red; */
 	position: absolute;
 	height: 64px;
 	width: 100%;
 	border-radius: 0px;
-	/* border: 2px solid black; */
 	z-index: 99;
-
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 
 	.header-link {
 		color: #ffffff;
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 20px;
 		text-align: center;
 		text-decoration: none;
 		align-self: center;
@@ -37,8 +31,6 @@ const HeaderStyle = styled.div`
 		align-self: center;
 		justify-content: flex-end;
 		margin-right: 12px;
-
-		/* align-content: flex-end; */
 	}
 `;
 function Header() {
@@ -50,20 +42,20 @@ function Header() {
 						<img src={Badge} alt='Badge' />
 					</Link>
 					<Link className='header-link' to='/nanny'>
-						Create Your Nanny Share
+						<h5>Create Your Nanny Share</h5>
 					</Link>
 					<Link className='header-link' to='/shares'>
-						Browse Shares
+						<h5>Browse Shares</h5>
 					</Link>
 					<Link className='header-link' to='/story'>
-						Our Story
+						<h5>Our Story</h5>
 					</Link>
 				</div>
 
 				<div className='right-header'>
 					<Button title='Become a Nanny Share Host' />
 					<Link className='header-link' to='/login'>
-						Sign In
+						<h5>Sign In</h5>
 					</Link>
 				</div>
 			</Router>
