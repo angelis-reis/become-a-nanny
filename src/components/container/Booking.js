@@ -30,7 +30,7 @@ function Booking() {
 					src={ProfileImage}
 					alt='User Profile'
 				/>
-				<Link className='action-link' to='/play'>
+				<Link className='action-link' to='/action'>
 					<span>See hapu in action (27 seconds)</span>
 				</Link>
 				<h4>Wednesday, Thursday, Friday - 7:30 - 5:30</h4>

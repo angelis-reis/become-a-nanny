@@ -33,7 +33,6 @@ const HeroStyle = styled.div`
 	.hero-content {
 		display: grid;
 		place-content: center;
-		/* padding-top: 140px; */
 		width: 1084px;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 360px;
