@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import Hero from '../components/container/Hero';
 import Booking from '../components/container/Booking';
 import Share from '../components/container/Share';
@@ -10,10 +10,18 @@ import Billing from '../components/container/Billing';
 import Diary from '../components/container/Diary';
 import Host from '../components/container/Host';
 import Footer from '../components/container/Footer';
+import Header from '../components/container/Header';
+
+const LandingPageStyle = styled.div`
+	/* display: grid;
+	place-items: center; */
+	background-color: #ffffff;
+`;
 
 function LandingPage() {
 	return (
-		<>
+		<LandingPageStyle>
+			<Header />
 			<Hero />
 			<Booking />
 			<Share />
@@ -24,8 +32,8 @@ function LandingPage() {
 			<Diary />
 			<Host />
 			<Footer />
-		</>
-	)
-};
+		</LandingPageStyle>
+	);
+}
 
 export default LandingPage;
