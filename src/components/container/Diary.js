@@ -1,21 +1,44 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import ImgSect5 from '../../images/ImageSection5.png';
+
 
 const DiaryStyle = styled.div`
-	height: 508px;
-	/* width: 1440px; */
+	height: 322px;
 	left: 0px;
 	top: 0px;
-	border-radius: 0px;
-	border: 2px solid black;
 	background: #f2f2f2;
+
+	display: grid;
+	grid-template-rows: 35px 40px 50px;
+	text-align: center;
+	place-items: center;
+
+	.divider {
+		width: 784px;
+		border-top: solid 2px #dfdfdf;
+		/* padding-bottom: 64px; */
+	}
+
+	.Diary-text {
+		width: 784px;
+	}
 `;
 
 function Diary() {
 	return (
 		<DiaryStyle>
-			<h1>Diary</h1>
+
+			<img src={ImgSect5} alt='Nanny Share Diary' />
+
+			<h2>Coming soon: Nanny Share Daily Diary! </h2>
+			<p className='Diary-text'>
+				With the Hapu daily diary your nanny will be able to update you
+				and your sharers with photos and commentary of the day. You and
+				sharers will receive notifications and you’ll be able to login
+				to view the daily adventures fo your little ones. We can’t wait!
+			</p>
 		</DiaryStyle>
 	);
 }
