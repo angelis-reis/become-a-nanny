@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import Button from '../Button';
@@ -36,6 +37,17 @@ const NewsLetterStyle = styled.div`
 		padding-left: 20px;
 	}
 	.form-field::placeholder {
+		/* Chrome, Firefox, Opera, Safari 10.1+ */
+		padding-left: 20px;
+	}
+
+	.form-field::-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		padding-left: 20px;
+	}
+
+	.form-field:-ms-input-placeholder {
+		/* Microsoft Edge */
 		padding-left: 20px;
 	}
 `;
@@ -46,8 +58,27 @@ function NewsLetter() {
 		handleSubmit,
 		formState: { errors }
 	} = useForm();
-	const onSubmit = (data) => console.log(data);
-	console.log(errors);
+
+	const newsLetterPost = async (data) => {
+		try {
+			const resp = await axios.post(
+				'https://api.jungledevs.com/api/v1/challenge-newsletter/',
+				data
+			);
+			console.log('Data post: ', data);
+			console.log(resp.data);
+
+			alert('Newsletter signed.');
+		} catch (err) {
+			console.error(err);
+		}
+	};
+
+	const onSubmit = (data) => {
+		// console.log(data);
+		console.log(errors);
+		newsLetterPost(data);
+	};
 
 	return (
 		<NewsLetterStyle>
@@ -82,7 +113,7 @@ function NewsLetter() {
 						/>
 
 						<Button title='Send'>
-							<input type='submit'></input>
+							<input type='submit' />
 						</Button>
 					</form>
 				</div>
