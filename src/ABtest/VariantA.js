@@ -13,16 +13,17 @@ const VariantAStyle = styled.div`
 		font-weight: 500;
 		line-height: 24px;
 	}
-
+	.play-button img {
+		width: 48px;
+		height: 48px;
+	}
 	.play-button span {
 		margin-left: 16px;
 		align-self: center;
 	}
-
 	h1 {
 		margin-bottom: 24px;
 	}
-
 	h2 {
 		margin-bottom: 40px;
 	}
@@ -47,5 +48,4 @@ function VariantA(props) {
 		</VariantAStyle>
 	);
 }
-
 export default VariantA;

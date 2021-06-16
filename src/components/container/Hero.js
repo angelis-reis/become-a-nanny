@@ -63,19 +63,8 @@ const HeroStyle = styled.section`
 	}
 	.img-header {
 		place-self: center;
-	}
-	.play-button {
-		display: flex;
-		align-self: center;
-		justify-content: flex-start;
-		color: #ffffff;
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 24px;
-	}
-	.play-button span {
-		margin-left: 16px;
-		align-self: center;
+		width: 316px;
+		height: 290px;
 	}
 `;
 

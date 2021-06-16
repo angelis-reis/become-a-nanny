@@ -21,6 +21,10 @@ const HeaderStyle = styled.div`
 		margin-left: 20px;
 		margin-right: 20px;
 	}
+	.header-link img {
+		width: 48px;
+		height: 64px;
+	}
 	.left-header {
 		display: flex;
 	}

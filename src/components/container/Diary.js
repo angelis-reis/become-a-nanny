@@ -21,6 +21,10 @@ const DiaryStyle = styled.section`
 		text-align: center;
 		place-items: center;
 	}
+	img {
+		width: 216px;
+		height: 96px;
+	}
 `;
 
 function Diary() {

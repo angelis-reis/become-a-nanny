@@ -14,6 +14,7 @@ const BookingStyle = styled.section`
 		height: 56px;
 		margin-right: 32px;
 	}
+	
 `;
 
 function Booking() {

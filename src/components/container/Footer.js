@@ -22,6 +22,10 @@ const FooterStyle = styled.div`
 		margin-left: 128px;
 		align-self: center;
 	}
+	.hapu-logo img {
+		width: 164px;
+		height: 24px;
+	}
 	.footer-links {
 		grid-area: footer-links;
 		display: flex;
@@ -39,6 +43,10 @@ const FooterStyle = styled.div`
 		display: flex;
 		align-self: center;
 		justify-content: flex-end;
+	}
+	.social-media img {
+		width: 45px;
+		height: 45px;
 	}
 	.copyright {
 		grid-area: copyright;

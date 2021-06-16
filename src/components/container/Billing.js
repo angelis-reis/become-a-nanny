@@ -12,6 +12,11 @@ const BillingStyle = styled.section`
 		width: 784px;
 		border-top: solid 2px #dfdfdf;
 	}
+
+	img{
+		width: 984px;
+		height: 392px;
+	}
 `;
 
 function Billing() {
