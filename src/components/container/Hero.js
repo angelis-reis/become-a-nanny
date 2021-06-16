@@ -11,11 +11,11 @@ import styled from 'styled-components';
 import ImgHeader from '../../images/ImageHeader.png';
 import VariantA from '../../ABtest/VariantA';
 import VariantB from '../../ABtest/VariantB';
-
+import MixpanelToken from '../../sensitive/MixpanleToken';
 
 experimentDebugger.enable();
 emitter.defineVariants('hapuHeroABTest', ['variant-a', 'variant-b'], [33, 33]);
-// const mixpanel = Mixpanel.init(secrets.mixpanelToken);
+const mixpanel = Mixpanel.init(MixpanelToken);
 
 const HeroStyle = styled.section`
 	/* backdrop-filter: grayscale(1); */
@@ -85,10 +85,8 @@ const HeroStyle = styled.section`
 `;
 
 const Hero = () => {
-
 	const onLinkClick = (e) => {
 		emitter.emitWin('hapuHeroABTest');
-		console.log('Koca: clicked on link');
 	};
 
 	return (
@@ -130,3 +128,21 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// Called when the experiment is displayed to the user.
+emitter.addPlayListener((experimentName, variantName) => {
+	console.log(
+		`Displaying experiment ${experimentName} variant ${variantName}`
+	);
+});
+
+// Called when a 'win' is emitted, in this case by this.refs.experiment.win()
+emitter.addWinListener((experimentName, variantName) => {
+	console.log(
+		`Variant ${variantName} of experiment ${experimentName} was clicked`
+	);
+	mixpanel.track(`${experimentName} ${variantName}`, {
+		name: experimentName,
+		variant: variantName
+	});
+});
