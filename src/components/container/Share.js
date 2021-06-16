@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ImgSect1 from '../../images/ImageSection1.png';
 
-const ShareStyle = styled.div`
+const ShareStyle = styled.section`
 	display: grid;
 	place-items: center;
 	height: 632px;

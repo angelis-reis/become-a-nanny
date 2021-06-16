@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ImgSect3 from '../../images/ImageSection3.png';
 
-const PaymentStyle = styled.div`
+const PaymentStyle = styled.section`
 	display: grid;
 	place-items: center;
 	height: 632px;

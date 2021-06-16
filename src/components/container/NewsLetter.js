@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import Button from '../Button';
 
-const NewsLetterStyle = styled.div`
+const NewsLetterStyle = styled.section`
 	height: 322px;
 	left: 0px;
 	top: 0px;

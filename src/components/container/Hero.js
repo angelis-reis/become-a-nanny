@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import ImgHeader from '../../images/ImageHeader.png';
 import PlayButton from '../../utils/PlayButton.svg';
 
-const HeroStyle = styled.div`
+const HeroStyle = styled.section`
 	/* backdrop-filter: grayscale(1); */
 	height: 616px;
 	display: grid;

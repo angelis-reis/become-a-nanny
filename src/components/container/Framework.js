@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-const FrameworkStyle = styled.div`
+const FrameworkStyle = styled.section`
 	height: 322px;
 	left: 0px;
 	top: 0px;

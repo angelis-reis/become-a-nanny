@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ImgSect4 from '../../images/ImageSection4.png';
 
-const BillingStyle = styled.div`
+const BillingStyle = styled.section`
 	height: 496px;
 	background: #f2f2f2;
 	display: grid;

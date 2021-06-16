@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ImgSect5 from '../../images/ImageSection5.png';
 
-const DiaryStyle = styled.div`
+const DiaryStyle = styled.section`
 	height: 322px;
 	left: 0px;
 	top: 0px;

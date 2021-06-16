@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import CalendarIcon from '../../utils/CalendarIcon.svg';
 
-const HostStyle = styled.div`
+const HostStyle = styled.section`
 	height: 322px;
 	left: 0px;
 	top: 0px;

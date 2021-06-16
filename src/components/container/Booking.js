@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ProfileImage from '../../utils/ProfileImage.svg';
 
-const BookingStyle = styled.div`
+const BookingStyle = styled.section`
 	height: 112px;
 	/* width: 1440px; */
 
