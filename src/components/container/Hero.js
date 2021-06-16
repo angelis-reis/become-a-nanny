@@ -1,9 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import {
+	Experiment,
+	Variant,
+	emitter,
+	experimentDebugger
+} from '@marvelapp/react-ab-test';
+import Mixpanel from 'mixpanel';
 import styled from 'styled-components';
 import ImgHeader from '../../images/ImageHeader.png';
-import PlayButton from '../../utils/PlayButton.svg';
+import VariantA from '../../ABtest/VariantA';
+import VariantB from '../../ABtest/VariantB';
+
+
+experimentDebugger.enable();
+emitter.defineVariants('hapuHeroABTest', ['variant-a', 'variant-b'], [33, 33]);
+// const mixpanel = Mixpanel.init(secrets.mixpanelToken);
 
 const HeroStyle = styled.section`
 	/* backdrop-filter: grayscale(1); */
@@ -11,10 +23,10 @@ const HeroStyle = styled.section`
 	display: grid;
 	place-content: center;
 
-	background: linear-gradient(175deg, #5912ac, #7e49c3, #c86dd7),
+	/* background: linear-gradient(175deg, #5912ac, #7e49c3, #c86dd7), */
 		url(https://s3-alpha-sig.figma.com/img/17eb/3037/a8afc96eccb6f1885700ab5d6e2e58ef?Expires=1624233600&Signature=FHsxic-Bp1zNtfKlKuWor75XVzZqhkvNdXUNjI826IVsU~fK2bxHCYRxeun7u8t0xp6PoHNuZ7iJlEIE~HBJIX~wAvuGKAza59aZewFA1N5ZRuUHu7SwtggKYwKy~Kpdr1KIRoljcihlcxTUZIhSJ2xaEGoutQHJo2UkQRzkKafG~vityj8yLIEMuDHzOXZCV4a3CoEffgtPoQdWTVyyXzmaXPc0K7~XJseWBHwMZB~giCZD6irn0hr5ds9pMJb52UStdu9sMiSCO0e7a0EnpvSj3Vn52EhNcGz4sVdMiH0RwHeH-VgSmUB4cKhCfF79Ok9vJLE-aOh0ZI82k~DgbA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
 
-	/* background-image: linear-gradient(175deg, #5912ac, #7e49c3, #c86dd7); */
+	background-image: linear-gradient(175deg, #5912ac, #7e49c3, #c86dd7);
 
 	background-blend-mode: darken;
 	object-fit: cover;
@@ -72,26 +84,38 @@ const HeroStyle = styled.section`
 	}
 `;
 
-function Hero() {
+const Hero = () => {
+
+	const onLinkClick = (e) => {
+		emitter.emitWin('hapuHeroABTest');
+		console.log('Koca: clicked on link');
+	};
+
 	return (
 		<HeroStyle>
 			<Router>
 				<div className='hero-content'>
 					<div className='hero-text'>
-						<h1>
-							Easily create or join a local nanny share with Hapu
-						</h1>
-						<h2>
-							Hapu is Airbnb for nanny share. Share your home,
-							nanny and costs and create new flexible, affordable
-							solutions in childcare.
-						</h2>
-						{/* <div className='video-play'> */}
-						<Link className='play-button' to='/play'>
-							<img src={PlayButton} alt='Play Button' />
-							<span>See hapu in action (27 seconds)</span>
-						</Link>
-						{/* </div> */}
+						<Experiment name='hapuHeroABTest'>
+							<Variant name='variant-a'>
+								<VariantA clickAction={onLinkClick} />
+							</Variant>
+
+							<Variant name='variant-b'>
+								<VariantB clickAction={onLinkClick} />
+							</Variant>
+
+							{/* <Variant name='variant-a'>
+								<VariantA clickAction={onLinkClick()} />
+							</Variant>
+
+							<Variant name='variant-b'>
+								<VariantB clickAction={onLinkClick()} />
+							</Variant> */}
+						</Experiment>
+
+						{/* <VariantA />
+						<VariantB /> */}
 					</div>
 
 					<img
@@ -103,6 +127,6 @@ function Hero() {
 			</Router>
 		</HeroStyle>
 	);
-}
+};
 
 export default Hero;
