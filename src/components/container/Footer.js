@@ -34,7 +34,6 @@ const FooterStyle = styled.div`
 		margin-right: 15px;
 		color: #3d3d3d;
 	}
-
 	.social-media {
 		grid-area: social-media;
 		display: flex;
@@ -55,7 +54,6 @@ function Footer() {
 				<Link className='hapu-logo' to='/'>
 					<img src={HapuLogo} alt='Hapu Logo' />
 				</Link>
-
 				<div className='footer-links'>
 					<Link className='footer-link' to='/share'>
 						<h5>Share Your Nanny</h5>
@@ -70,7 +68,6 @@ function Footer() {
 						<h5>Terms & Privacity</h5>
 					</Link>
 				</div>
-
 				<div className='social-media'>
 					<Link className='footer-link' to='/'>
 						<img src={FacebookIcon} alt='Facebook' />
@@ -82,7 +79,6 @@ function Footer() {
 						<img src={InstagramIcon} alt='Instagram' />
 					</Link>
 				</div>
-
 				<h5 className='copyright'>
 					Copyright © 2017 Hapu PTY Limited All rights reserved
 				</h5>
@@ -90,5 +86,4 @@ function Footer() {
 		</FooterStyle>
 	);
 }
-
 export default Footer;

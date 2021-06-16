@@ -12,7 +12,6 @@ const HostStyle = styled.section`
 	.Host-text {
 		width: 784px;
 	}
-
 	.host-content {
 		margin-top: 50px;
 		display: grid;
@@ -20,7 +19,6 @@ const HostStyle = styled.section`
 		text-align: center;
 		place-items: center;
 	}
-
 	.host-button {
 		width: 304px;
 		height: 68px;
@@ -37,21 +35,17 @@ const HostStyle = styled.section`
 			'calendar-icon button-text'
 			'calendar-icon button-subtext';
 	}
-
 	.create-link {
 		text-decoration: none;
 	}
-
 	.host-button span {
 		color: #ffffff;
 	}
-
 	.calendar-icon {
 		grid-area: calendar-icon;
 		width: 32px;
 		height: 32px;
 	}
-
 	.button-text {
 		grid-area: button-text;
 		font-size: 16px;
@@ -87,7 +81,6 @@ function Host() {
 								src={CalendarIcon}
 								alt='Nanny Share Calendar Button'
 							/>
-
 							<span className='button-text'>
 								Create your nanny share
 							</span>
@@ -96,7 +89,6 @@ function Host() {
 							</span>
 						</div>
 					</Link>
-
 					<Link to='/browse'>
 						<span>Or browse local nanny-shares</span>
 					</Link>
@@ -105,5 +97,4 @@ function Host() {
 		</HostStyle>
 	);
 }
-
 export default Host;

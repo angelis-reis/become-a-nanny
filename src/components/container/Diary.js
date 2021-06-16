@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import ImgSect5 from '../../images/ImageSection5.png';
 
@@ -9,17 +8,13 @@ const DiaryStyle = styled.section`
 	top: 0px;
 	background: #f2f2f2;
 
-
 	.divider {
 		width: 784px;
 		border-top: solid 2px #dfdfdf;
-		/* padding-bottom: 64px; */
 	}
-
 	.Diary-text {
 		width: 784px;
 	}
-
 	.diary-content {
 		display: grid;
 		grid-template-rows: 100px 70px 130px;
@@ -33,7 +28,6 @@ function Diary() {
 		<DiaryStyle>
 			<div className='diary-content'>
 				<img src={ImgSect5} alt='Nanny Share Diary' />
-
 				<h2>Coming soon: Nanny Share Daily Diary! </h2>
 				<p className='Diary-text'>
 					With the Hapu daily diary your nanny will be able to update
@@ -46,5 +40,4 @@ function Diary() {
 		</DiaryStyle>
 	);
 }
-
 export default Diary;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import ImgSect1 from '../../images/ImageSection1.png';
 
@@ -16,13 +15,11 @@ const ShareStyle = styled.section`
 		place-items: center;
 		width: 1084px;
 	}
-
 	.share-text {
 		display: grid;
 		width: 450px;
 		grid-template-rows: 64px 224px 24px;
 	}
-
 	.share-img {
 		width: 584px;
 		height: 392px;
@@ -51,12 +48,10 @@ function Share() {
 							affordable solutions in childcare that work for you
 							and your community.
 						</span>
-
 						<Link className='start-link' to='/start'>
 							<span>Ready to get started?</span>
 						</Link>
 					</div>
-
 					<img
 						className='share-img'
 						src={ImgSect1}
@@ -67,5 +62,4 @@ function Share() {
 		</ShareStyle>
 	);
 }
-
 export default Share;

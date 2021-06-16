@@ -20,5 +20,4 @@ function Button(props) {
 		</ButtonStyle>
 	);
 }
-
 export default Button;

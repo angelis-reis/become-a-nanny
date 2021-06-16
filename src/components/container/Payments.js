@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import ImgSect3 from '../../images/ImageSection3.png';
 
@@ -17,18 +15,15 @@ const PaymentStyle = styled.section`
 		place-items: center;
 		width: 1084px;
 	}
-
 	.Payment-text {
 		display: grid;
 		width: 450px;
 		grid-template-rows: 64px 224px 24px;
 	}
-
 	.Payment-img {
 		width: 456px;
 		height: 336px;
 	}
-
 	.divider {
 		width: 784px;
 		border-top: solid 2px #dfdfdf;
@@ -40,7 +35,6 @@ function Payment() {
 		<PaymentStyle>
 			<Router>
 				<span className='divider' />
-
 				<div className='Payment-content'>
 					<img
 						className='Payment-img'
@@ -57,7 +51,6 @@ function Payment() {
 							payment system takes care of the rest. You need
 							never talk money or who owes what.
 						</p>
-
 						<Link className='read-link' to='/bridget'>
 							<span>
 								Read how Bridget’s share (without Hapu) ended
@@ -70,5 +63,4 @@ function Payment() {
 		</PaymentStyle>
 	);
 }
-
 export default Payment;

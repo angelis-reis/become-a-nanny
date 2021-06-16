@@ -21,11 +21,9 @@ const HeaderStyle = styled.div`
 		margin-left: 20px;
 		margin-right: 20px;
 	}
-
 	.left-header {
 		display: flex;
 	}
-
 	.right-header {
 		display: flex;
 		align-self: center;
@@ -51,7 +49,6 @@ function Header() {
 						<h5>Our Story</h5>
 					</Link>
 				</div>
-
 				<div className='right-header'>
 					<Button title='Become a Nanny Share Host' />
 					<Link className='header-link' to='/login'>
@@ -62,5 +59,4 @@ function Header() {
 		</HeaderStyle>
 	);
 }
-
 export default Header;

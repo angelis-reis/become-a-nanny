@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
@@ -9,17 +8,13 @@ const FrameworkStyle = styled.section`
 	top: 0px;
 	background: #f2f2f2;
 
-
 	.divider {
 		width: 784px;
 		border-top: solid 2px #dfdfdf;
-		/* padding-bottom: 64px; */
 	}
-
 	.framework-text {
 		width: 784px;
 	}
-
 	.framework-content {
 		display: grid;
 		grid-template-rows: 40px 100px 70px 130px;
@@ -54,5 +49,4 @@ function Framework() {
 		</FrameworkStyle>
 	);
 }
-
 export default Framework;

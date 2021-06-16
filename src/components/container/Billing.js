@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import ImgSect4 from '../../images/ImageSection4.png';
 
@@ -23,5 +22,4 @@ function Billing() {
 		</BillingStyle>
 	);
 }
-
 export default Billing;

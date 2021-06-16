@@ -1,18 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import ProfileImage from '../../utils/ProfileImage.svg';
 
 const BookingStyle = styled.section`
 	height: 112px;
-	/* width: 1440px; */
-
 	display: flex;
-	/* align-self: center; */
 	justify-content: center;
 	align-items: center;
-
 
 	.profile-img {
 		width: 56px;
@@ -38,5 +33,4 @@ function Booking() {
 		</BookingStyle>
 	);
 }
-
 export default Booking;

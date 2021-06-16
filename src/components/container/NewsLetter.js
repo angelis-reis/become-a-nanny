@@ -14,20 +14,17 @@ const NewsLetterStyle = styled.section`
 		width: 784px;
 		border-top: solid 2px #dfdfdf;
 	}
-
 	.form-fields {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
-
 	.newsletter-content {
 		display: grid;
 		grid-template-rows: 40px 100px 70px 130px;
 		text-align: center;
 		place-items: center;
 	}
-
 	.form-field {
 		width: 232px;
 		height: 48px;
@@ -40,12 +37,10 @@ const NewsLetterStyle = styled.section`
 		/* Chrome, Firefox, Opera, Safari 10.1+ */
 		padding-left: 20px;
 	}
-
 	.form-field::-ms-input-placeholder {
 		/* Internet Explorer 10-11 */
 		padding-left: 20px;
 	}
-
 	.form-field:-ms-input-placeholder {
 		/* Microsoft Edge */
 		padding-left: 20px;
@@ -75,7 +70,6 @@ function NewsLetter() {
 	};
 
 	const onSubmit = (data) => {
-		// console.log(data);
 		console.log(errors);
 		newsLetterPost(data);
 	};
@@ -111,7 +105,6 @@ function NewsLetter() {
 								pattern: /^\S+@\S+$/i
 							})}
 						/>
-
 						<Button title='Send'>
 							<input type='submit' />
 						</Button>
@@ -121,5 +114,4 @@ function NewsLetter() {
 		</NewsLetterStyle>
 	);
 }
-
 export default NewsLetter;

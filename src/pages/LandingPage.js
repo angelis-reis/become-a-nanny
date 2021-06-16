@@ -13,8 +13,6 @@ import Footer from '../components/container/Footer';
 import Header from '../components/container/Header';
 
 const LandingPageStyle = styled.div`
-	/* display: grid;
-	place-items: center; */
 	background-color: #ffffff;
 `;
 
@@ -35,5 +33,4 @@ function LandingPage() {
 		</LandingPageStyle>
 	);
 }
-
 export default LandingPage;
