@@ -4,24 +4,19 @@ import styled from 'styled-components';
 import CalendarIcon from '../../utils/CalendarIcon.svg';
 
 const HostStyle = styled.section`
-	height: 322px;
-	left: 0px;
-	top: 0px;
+	height: 380px;
 	background: #ffffff;
+	display: grid;
+	justify-items: center;
 
-	.Host-text {
-		width: 784px;
-	}
 	.host-content {
-		margin-top: 50px;
-		display: grid;
-		grid-template-rows: 70px 20px 170px 30px;
+		margin-top: 80px;
 		text-align: center;
-		place-items: center;
 	}
 	.host-button {
 		width: 304px;
 		height: 68px;
+		margin-bottom: 24px;
 		border-radius: 4px;
 		border: none;
 		background-color: #5e20a4;
@@ -29,22 +24,27 @@ const HostStyle = styled.section`
 		cursor: pointer;
 		display: grid;
 		place-items: center;
-		grid-template-columns: 70px 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 56px 1fr;
+		grid-template-rows: 38px 1fr;
 		grid-template-areas:
 			'calendar-icon button-text'
 			'calendar-icon button-subtext';
 	}
-	.create-link {
-		text-decoration: none;
-	}
 	.host-button span {
 		color: #ffffff;
+		margin-left: 20px;
 	}
+	.create-link {
+		text-decoration: none;
+		display: grid;
+		justify-items: center;
+	}
+
 	.calendar-icon {
 		grid-area: calendar-icon;
 		width: 32px;
 		height: 32px;
+		justify-self: end;
 	}
 	.button-text {
 		grid-area: button-text;
@@ -53,7 +53,6 @@ const HostStyle = styled.section`
 		font-weight: 400;
 		justify-self: start;
 		align-self: end;
-		margin-top: 10px;
 	}
 	.button-subtext {
 		grid-area: button-subtext;
@@ -63,6 +62,17 @@ const HostStyle = styled.section`
 		justify-self: start;
 		align-self: start;
 	}
+	h2 {
+		margin-bottom: 16px;
+	}
+	p {
+		margin-bottom: 32px;
+	}
+	.host-link {
+		color: #5e20a4;
+		text-decoration: underline;
+		text-decoration-color: #5e20a4;
+	}
 `;
 
 function Host() {
@@ -71,11 +81,9 @@ function Host() {
 			<Router>
 				<div className='host-content'>
 					<h2>Become a nanny share host </h2>
-					<p className='Host-text'>
-						Takes less than 5 minutes to get started
-					</p>
+					<p>Takes less than 5 minutes to get started</p>
 					<Link className='create-link' to='/login'>
-						<div className='host-button'>
+						<button type='button' className='host-button'>
 							<img
 								className='calendar-icon'
 								src={CalendarIcon}
@@ -87,10 +95,12 @@ function Host() {
 							<span className='button-subtext'>
 								Takes less than 5 minutes
 							</span>
-						</div>
+						</button>
 					</Link>
 					<Link to='/browse'>
-						<span>Or browse local nanny-shares</span>
+						<span className='host-link'>
+							Or browse local nanny-shares
+						</span>
 					</Link>
 				</div>
 			</Router>

@@ -38,7 +38,7 @@ emitter.addWinListener((experimentName, variantName) => {
 const HeroStyle = styled.section`
 	height: 616px;
 	display: grid;
-	place-content: center;
+	justify-items: center;
 	background: linear-gradient(175deg, #5912ac, #7e49c3, #c86dd7),
 		url(/Image.png);
 	object-fit: cover;
@@ -51,20 +51,22 @@ const HeroStyle = styled.section`
 
 	.hero-content {
 		display: grid;
-		place-content: center;
-		width: 1084px;
+		width: 1184px;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 360px;
+		grid-template-rows: 300px;
 		color: #ffffff;
+		margin-top: 170px;
 	}
 	.hero-text {
 		place-self: center;
 		width: 560px;
 	}
 	.img-header {
-		place-self: center;
+		place-self: end;
 		width: 316px;
 		height: 290px;
+		padding-bottom: 20px;
+		margin-right: 100px;
 	}
 `;
 

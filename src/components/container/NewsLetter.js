@@ -6,24 +6,34 @@ import Button from '../Button';
 
 const NewsLetterStyle = styled.section`
 	height: 322px;
-	left: 0px;
-	top: 0px;
 	background: #f2f2f2;
+	display: grid;
+	justify-items: center;
 
+	.newsletter-content {
+		width: 984px;
+		display: grid;
+		justify-items: center;
+		/* grid-template-rows: 2px 32px 24px 50px; */
+		/* gap: 16px; */
+	}
 	.divider {
 		width: 784px;
 		border-top: solid 2px #dfdfdf;
 	}
+	h3 {
+		margin-top: 64px;
+	}
+	span {
+		margin-top: 16px;
+		font-size: 18px;
+	}
 	.form-fields {
+		margin-top: 74px;
+		margin-bottom: 64px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-	.newsletter-content {
-		display: grid;
-		grid-template-rows: 40px 100px 70px 130px;
-		text-align: center;
-		place-items: center;
 	}
 	.form-field {
 		width: 232px;
@@ -33,17 +43,17 @@ const NewsLetterStyle = styled.section`
 		margin-right: 12px;
 		padding-left: 20px;
 	}
-	.form-field::placeholder {
-		/* Chrome, Firefox, Opera, Safari 10.1+ */
-		padding-left: 20px;
-	}
-	.form-field::-ms-input-placeholder {
-		/* Internet Explorer 10-11 */
-		padding-left: 20px;
-	}
-	.form-field:-ms-input-placeholder {
-		/* Microsoft Edge */
-		padding-left: 20px;
+	.send-button {
+		display: grid;
+		place-items: center;
+		height: 48px;
+		width: 96px;
+		border-radius: 4px;
+		border: none;
+		background-color: #00a870;
+		color: #ffffff;
+		text-decoration: none;
+		cursor: pointer;
 	}
 `;
 
@@ -77,39 +87,41 @@ function NewsLetter() {
 	return (
 		<NewsLetterStyle>
 			<div className='newsletter-content'>
-				<span className='divider' />
+				<p className='divider' />
 				<h3>Are you a parent without a nanny and looking to share?</h3>
 				<span>
 					Leave us your name and email and we’ll update you as soon as
 					a share becomes available in your area!
 				</span>
-				<div className='form-fields'>
-					<form onSubmit={handleSubmit(onSubmit)}>
-						<input
-							className='form-field'
-							type='text'
-							placeholder='Your name'
-							{...register('name', {
-								required: true,
-								max: 30,
-								min: 3,
-								maxLength: 80
-							})}
-						/>
-						<input
-							className='form-field'
-							type='email'
-							placeholder='Your email'
-							{...register('email', {
-								required: true,
-								pattern: /^\S+@\S+$/i
-							})}
-						/>
-						<Button title='Send'>
-							<input type='submit' />
-						</Button>
-					</form>
-				</div>
+
+				<form className='form-fields' onSubmit={handleSubmit(onSubmit)}>
+					<input
+						className='form-field'
+						type='text'
+						placeholder='Your name'
+						{...register('name', {
+							required: true,
+							max: 30,
+							min: 3,
+							maxLength: 80
+						})}
+					/>
+					<input
+						className='form-field'
+						type='email'
+						placeholder='Your email'
+						{...register('email', {
+							required: true,
+							pattern: /^\S+@\S+$/i
+						})}
+					/>
+					<button type='submit' className='send-button'>
+						<h5>Send</h5>
+					</button>
+
+					{/* <input type='submit' /> */}
+				</form>
+				<p className='divider' />
 			</div>
 		</NewsLetterStyle>
 	);

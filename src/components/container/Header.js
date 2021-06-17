@@ -17,22 +17,39 @@ const HeaderStyle = styled.div`
 		color: #ffffff;
 		text-align: center;
 		text-decoration: none;
-		align-self: center;
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-right: 32px;
+		margin-top: 28px;
 	}
-	.header-link img {
+	.badge {
 		width: 48px;
 		height: 64px;
+		margin-left: 20px;
+		margin-right: 40px;
 	}
 	.left-header {
 		display: flex;
 	}
 	.right-header {
 		display: flex;
-		align-self: center;
 		justify-content: flex-end;
-		margin-right: 12px;
+		margin-right: 32px;
+	}
+	.header-button {
+		display: grid;
+		place-items: center;
+		margin-top: 16px;
+		height: 44px;
+		width: 234px;
+		border-radius: 4px;
+		border: none;
+		background-color: #00a870;
+		color: #ffffff;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	.sign-in {
+		margin-left: 23px;
+		margin-top: 28px;
 	}
 `;
 function Header() {
@@ -40,7 +57,7 @@ function Header() {
 		<HeaderStyle>
 			<Router>
 				<div className='left-header'>
-					<Link className='header-link' to='/'>
+					<Link className='badge' to='/'>
 						<img src={Badge} alt='Badge' />
 					</Link>
 					<Link className='header-link' to='/nanny'>
@@ -54,8 +71,10 @@ function Header() {
 					</Link>
 				</div>
 				<div className='right-header'>
-					<Button title='Become a Nanny Share Host' />
-					<Link className='header-link' to='/login'>
+					<button type='button' className='header-button'>
+						<h5>Become a Nanny Share Host</h5>
+					</button>
+					<Link className='header-link sign-in' to='/login'>
 						<h5>Sign In</h5>
 					</Link>
 				</div>

@@ -5,24 +5,42 @@ import ImgSect1 from '../../images/ImageSection1.png';
 
 const ShareStyle = styled.section`
 	display: grid;
-	place-items: center;
 	height: 632px;
 	background: #f2f2f2;
+	justify-items: center;
 
 	.share-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		place-items: center;
-		width: 1084px;
+		width: 1184px;
+		margin-top: 120px;
 	}
 	.share-text {
+		justify-self: start;
+		margin-left: 100px;
 		display: grid;
 		width: 450px;
 		grid-template-rows: 64px 224px 24px;
+		gap: 40px;
 	}
 	.share-img {
+		justify-self: end;
 		width: 584px;
 		height: 392px;
+	}
+	h2 {
+		padding-bottom: 40px;
+	}
+	.start-link span {
+		color: #5e20a4;
+		text-decoration: underline;
+		text-decoration-color: #5e20a4;
+	}
+
+	.tribe-link span {
+		color: #5e20a4;
+		text-decoration: underline;
+		text-decoration-color: #5e20a4;
 	}
 `;
 
@@ -32,7 +50,10 @@ function Share() {
 			<Router>
 				<div className='share-content'>
 					<div className='share-text'>
-						<h2>Share your home, nanny and costs</h2>
+						<h2>
+							Share your home, <br />
+							nanny and costs
+						</h2>
 						<span>
 							You have a fantastic home, a fantastic nanny and
 							wouldn’t cutting your costs in half be, well,

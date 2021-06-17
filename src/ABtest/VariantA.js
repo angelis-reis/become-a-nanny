@@ -26,6 +26,8 @@ const VariantAStyle = styled.div`
 	}
 	h2 {
 		margin-bottom: 40px;
+		font-size: 18px;
+		line-height: 24px;
 	}
 `;
 

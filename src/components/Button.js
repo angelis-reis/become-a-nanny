@@ -7,7 +7,7 @@ const ButtonStyle = styled.button`
 	border: none;
 	background-color: #00a870;
 	color: #ffffff;
-	text-align: center;
+	/* text-align: center; */
 	text-decoration: none;
 	padding: 12px 21px;
 	cursor: pointer;

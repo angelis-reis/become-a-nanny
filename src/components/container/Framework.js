@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const FrameworkStyle = styled.section`
-	height: 322px;
-	left: 0px;
-	top: 0px;
+	height: 380px;
 	background: #f2f2f2;
+	display: grid;
+	justify-items: center;
 
 	.divider {
 		width: 784px;
@@ -16,10 +16,19 @@ const FrameworkStyle = styled.section`
 		width: 784px;
 	}
 	.framework-content {
-		display: grid;
-		grid-template-rows: 40px 100px 70px 130px;
 		text-align: center;
-		place-items: center;
+	}
+	h2 {
+		margin-top: 96px;
+	}
+	p {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.read-link span {
+		color: #5e20a4;
+		text-decoration: underline;
+		text-decoration-color: #5e20a4;
 	}
 `;
 
@@ -27,8 +36,9 @@ function Framework() {
 	return (
 		<FrameworkStyle>
 			<Router>
+
 				<div className='framework-content'>
-					<span className='divider' />
+
 					<h2>A framework built for the long term </h2>
 					<p className='framework-text'>
 						Childcare is for the long term. And you need a framework

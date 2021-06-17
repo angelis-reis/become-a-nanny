@@ -14,7 +14,11 @@ const BookingStyle = styled.section`
 		height: 56px;
 		margin-right: 32px;
 	}
-	
+	.action-link span {
+		color: #5e20a4;
+		text-decoration: underline;
+		text-decoration-color: #5e20a4;
+	}
 `;
 
 function Booking() {

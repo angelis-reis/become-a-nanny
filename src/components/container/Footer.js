@@ -11,7 +11,7 @@ const FooterStyle = styled.div`
 	height: 160px;
 	width: 100%;
 	display: grid;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 45px 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
 		'hapu-logo footer-links social-media'
@@ -23,36 +23,42 @@ const FooterStyle = styled.div`
 		align-self: center;
 	}
 	.hapu-logo img {
-		width: 164px;
+		width: 64px;
 		height: 24px;
 	}
 	.footer-links {
 		grid-area: footer-links;
 		display: flex;
+		gap: 30px;
+		align-self: center;
 	}
 	.footer-link {
 		text-align: center;
 		text-decoration: none;
-		align-self: center;
-		margin-left: 15px;
-		margin-right: 15px;
 		color: #3d3d3d;
 	}
 	.social-media {
 		grid-area: social-media;
 		display: flex;
-		align-self: center;
 		justify-content: flex-end;
+		margin-right: 128px;
+		align-self: center;
 	}
 	.social-media img {
 		width: 45px;
 		height: 45px;
 	}
+	.twiter-icon {
+		margin-left: 16px;
+		margin-right: 16px;
+	}
 	.copyright {
 		grid-area: copyright;
 		text-align: center;
 		align-self: end;
-		margin-bottom: 12px;
+		margin-bottom: 32px;
+		color: #3d3d3d;
+		font-size: 12px;
 	}
 `;
 function Footer() {
@@ -77,13 +83,13 @@ function Footer() {
 					</Link>
 				</div>
 				<div className='social-media'>
-					<Link className='footer-link' to='/'>
+					<Link to='/'>
 						<img src={FacebookIcon} alt='Facebook' />
 					</Link>
-					<Link className='footer-link' to='/'>
+					<Link className='twiter-icon' to='/'>
 						<img src={TwitterIcon} alt='Twitter' />
 					</Link>
-					<Link className='footer-link' to='/'>
+					<Link to='/'>
 						<img src={InstagramIcon} alt='Instagram' />
 					</Link>
 				</div>

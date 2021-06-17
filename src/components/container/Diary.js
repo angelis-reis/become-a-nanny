@@ -3,27 +3,25 @@ import styled from 'styled-components';
 import ImgSect5 from '../../images/ImageSection5.png';
 
 const DiaryStyle = styled.section`
-	height: 322px;
-	left: 0px;
-	top: 0px;
+	height: 508px;
 	background: #f2f2f2;
+	display: grid;
+	justify-items: center;
 
-	.divider {
-		width: 784px;
-		border-top: solid 2px #dfdfdf;
-	}
-	.Diary-text {
-		width: 784px;
-	}
 	.diary-content {
-		display: grid;
-		grid-template-rows: 100px 70px 130px;
 		text-align: center;
-		place-items: center;
+		margin-top: 96px;
 	}
 	img {
 		width: 216px;
 		height: 96px;
+	}
+	h2 {
+		margin-top: 40px;
+	}
+	.Diary-text {
+		width: 784px;
+		margin-top: 40px;
 	}
 `;
 

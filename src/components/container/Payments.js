@@ -5,28 +5,41 @@ import ImgSect3 from '../../images/ImageSection3.png';
 
 const PaymentStyle = styled.section`
 	display: grid;
-	place-items: center;
-	height: 632px;
+	/* place-items: center; */
+	justify-items: center;
+	height: 528px;
 	background: #f2f2f2;
 
 	.Payment-content {
+		margin-top: 104px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		place-items: center;
-		width: 1084px;
+		gap: 44px;
+		width: 984px;
 	}
 	.Payment-text {
-		display: grid;
 		width: 450px;
-		grid-template-rows: 64px 224px 24px;
+	}
+	.Payment-text h2 {
+		margin-bottom: 40px;
+	}
+	.Payment-text p {
+		margin-bottom: 40px;
 	}
 	.Payment-img {
 		width: 456px;
 		height: 336px;
+		justify-self: end;
+	}
+	.read-link span {
+		color: #5e20a4;
+		text-decoration: underline;
+		text-decoration-color: #5e20a4;
 	}
 	.divider {
 		width: 784px;
 		border-top: solid 2px #dfdfdf;
+		align-self: end;
 	}
 `;
 
@@ -34,7 +47,6 @@ function Payment() {
 	return (
 		<PaymentStyle>
 			<Router>
-				<span className='divider' />
 				<div className='Payment-content'>
 					<img
 						className='Payment-img'
@@ -59,6 +71,7 @@ function Payment() {
 						</Link>
 					</div>
 				</div>
+				<span className='divider' />
 			</Router>
 		</PaymentStyle>
 	);
