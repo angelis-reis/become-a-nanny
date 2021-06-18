@@ -2,16 +2,6 @@
     Hapu's Nanny Share (Jungle Devs's React Challenge)
 </h1>
 
-<p align="center">
- <a href="#-about">About</a> •
- <a href="#-functionalities">Functionalities</a> •
- <a href="#-layout">Layout</a> •
- <a href="#-running-application">Running application</a> •
- <a href="#-technology">Technology</a> •
- <a href="#-author">Author</a> •
- <a href="#-license">License</a>
-</p>
-
 ## 💻 About the Project
 
 Hapu is Airbnb for nanny share. Share your home, nanny, and costs and create new flexible, affordable solutions in childcare.
