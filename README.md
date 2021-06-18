@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+<h1 align="center">
+    Hapu's Nanny Share (Jungle Devs's React Challenge)
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💻 About the Project
 
-## Available Scripts
+Hapu is Airbnb for nanny share. Share your home, nanny, and costs and create new flexible, affordable solutions in childcare.
 
-In the project directory, you can run:
+Simple land page, with A/B test and newsletter API integration.
 
-### `yarn start`
+Project developed as a ReactJs technical challenge for the Jungle Dev's company.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚙️ Functionalities
 
-### `yarn test`
+-   [x] A/B test for user interaction analytics
+-   [x] Newsletter subscription
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## 🎨 Layout
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Application layout available in Figma:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="https://www.figma.com/file/iBxoiuoSXy3SiOAnwXo2Np/Frontend-%E2%80%93-Challenge-1B?node-id=0%3A1">
+  <img alt="Figma layout" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Before you start, you need to install the following tools on your computer:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🧭 Running the application in development mode
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
 
-## Learn More
+# Clone this repository
+$ https://github.com/angelis-reis/become-a-nanny
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Access the project folder
+$ cd become-a-nanny
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install the project dependencies
+$ npm install
 
-### Code Splitting
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# The application will open in port:3000 - open http://localhost:3000 in your browser
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## A/B test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    The A/B test has two variants, A and B. These variants change the Title and Subtitle in the hero section. You can find the A/B test variants inside src/ABtest folder. When the Hero section link is pressed, a win is emitted for variants A or B.
 
-### Advanced Configuration
+    When we run our app in development mode, we'll see a small control panel at the bottom of the screen. This lets us manually switch between the different variants so we can easily test the UI for each of these cases without having to randomly get assigned to it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    A key-value pair is stored in localStorage defining which variant the user is set to receive. This allows the user to receive a consistent experience while using the app.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Logging A/B test data
 
-### `yarn build` fails to minify
+    This application sends the A/B test data for the MixPanel service for analytics. For this, you need to create an account in MixPanel, create a new project and get the project's token.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Add the project's token in the MixpanelToken.js file inside src/sensitive. This folder is in .gitignore so that the private token will not be accessible in the running application.
+
+---
+
+## Newsletter subscription
+
+The newsletter subscription form sends a post request for the Jungle Dev's API (https://api.jungledevs.com/api/v1/challenge-newsletter/) with the user's name and user's email.
+
+---
+
+## 🛠 Creating a Production Build
+
+```bash
+
+# creates a build directory with a production build of the app
+$ npm run build
+
+```
+
+    This creates a build directory inside the root directory, which bundles your React app and minifies it into simple HTML, CSS, and JavaScript files.
+    With the build files, you can deploy your application at your favorite cloud host.
+
+---
+
+## 🛠 Technology
+
+This are the tolls used in this project:
+
+### **Website** ([React](https://reactjs.org/))
+
+-   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[Axios](https://github.com/axios/axios)**
+-   **[styled-components](https://github.com/styled-components/styled-components)**
+-   **[react-hook-form](https://github.com/react-hook-form/react-hook-form)**
+-   **[hookform/error-message](https://github.com/react-hook-form/error-message)**
+-   **[react-ab-test](https://github.com/marvelapp/react-ab-test)**
+-   **[mixpanel](https://github.com/mixpanel/mixpanel-js)**
+-   **[Eslint](https://github.com/eslint/eslint)**
+-   **[prettier](https://github.com/prettier/prettier)**
+
+-   Code Editor: **[Visual Studio Code](https://code.visualstudio.com/)**
+-   Commit Convention: **[ConventionalCommits](https://www.conventionalcommits.org/en/v1.0.0/)**
+-   Fonts: **[Inter](https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap')**
+
+---
+
+## 🦸 Author
+
+<a href="https://github.com/angelis-reis">
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/18598530?v=4" width="100px;" alt=""/>
+<br />
+<sub><b>Frederico de Angelis Reis</b></sub></a>
+<br />
+
+---
+
+## 📝 License
+
+This project is under [MIT](./LICENSE).
+
+Made by Frederico de Angelis Reis 👋🏽 [Get in touch!](https://www.linkedin.com/in/frederico-matheus-de-angelis-reis-2505b2117/)
+
+---
