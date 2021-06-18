@@ -1,16 +1,15 @@
-
 <h1 align="center">
     Hapu's Nanny Share (Jungle Devs's React Challenge)
 </h1>
 
 <p align="center">
- <a href="#-sobre-o-projeto">About</a> •
- <a href="#-funcionalidades">Functionalitie</a> •
+ <a href="#-About">About</a> •
+ <a href="#-Functionalities">Functionalities</a> •
  <a href="#-layout">Layout</a> •
- <a href="#-como-executar-o-projeto">Running application</a> •
+ <a href="#-Running-application">Running application</a> •
  <a href="#-Technology">Technology</a> •
- <a href="#-autor">Author</a> •
- <a href="#user-content--licença">License</a>
+ <a href="#-Author">Author</a> •
+ <a href="#user-content--License">License</a>
 </p>
 
 ## 💻 About the Project
@@ -47,7 +46,6 @@ Before you start, you need to install the following tools on your computer:
 
 ---
 
-
 ## 🧭 Running the application in development mode
 
 ```bash
@@ -67,22 +65,25 @@ $ npm start
 # The application will open in port:3000 - open http://localhost:3000 in your browser
 
 ```
+
 ---
+
 ## A/B test
 
-The A/B test has two variants, A and B. These variants change the Title and Subtitle in the hero section. You can find the A/B test variants inside src/ABtest folder. When the Hero section link is pressed, a win is emitted for variants A or B.
+    The A/B test has two variants, A and B. These variants change the Title and Subtitle in the hero section. You can find the A/B test variants inside src/ABtest folder. When the Hero section link is pressed, a win is emitted for variants A or B.
 
-When we run our app in development mode, we'll see a small control panel at the bottom of the screen. This lets us manually switch between the different variants so we can easily test the UI for each of these cases without having to randomly get assigned to it.
+    When we run our app in development mode, we'll see a small control panel at the bottom of the screen. This lets us manually switch between the different variants so we can easily test the UI for each of these cases without having to randomly get assigned to it.
 
-A key-value pair is stored in localStorage defining which variant the user is set to receive. This allows the user to receive a consistent experience while using the app.
+    A key-value pair is stored in localStorage defining which variant the user is set to receive. This allows the user to receive a consistent experience while using the app.
+
 ---
-
 
 ## Logging A/B test data
 
-This application sends the A/B test data for the MixPanel service for analytics. For this, you need to create an account in MixPanel, create a new project and get the project's token.
+    This application sends the A/B test data for the MixPanel service for analytics. For this, you need to create an account in MixPanel, create a new project and get the project's token.
 
-Add the project's token in the MixpanelToken.js file inside src/sensitive. This folder is in .gitignore so that the private token will not be accessible in the running application.
+    Add the project's token in the MixpanelToken.js file inside src/sensitive. This folder is in .gitignore so that the private token will not be accessible in the running application.
+
 ---
 
 ## Newsletter subscription
@@ -99,8 +100,9 @@ The newsletter subscription form sends a post request for the Jungle Dev's API (
 $ npm run build
 
 ```
-This creates a build directory inside the root directory, which bundles your React app and minifies it into simple HTML, CSS, and JavaScript files.
-With the build files, you can deploy your application at your favorite cloud host.
+
+    This creates a build directory inside the root directory, which bundles your React app and minifies it into simple HTML, CSS, and JavaScript files.
+    With the build files, you can deploy your application at your favorite cloud host.
 
 ---
 
@@ -133,9 +135,6 @@ This are the tolls used in this project:
 <br />
 <sub><b>Frederico de Angelis Reis</b></sub></a>
 <br />
-
-[![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/frederico-matheus-de-angelis-reis-2505b2117/)
-[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:angelisreisbiof@gmail.com)
 
 ---
 
