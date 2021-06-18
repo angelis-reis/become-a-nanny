@@ -18,19 +18,22 @@ const ShareStyle = styled.section`
 	.share-text {
 		justify-self: start;
 		margin-left: 100px;
-		display: grid;
-		width: 450px;
-		grid-template-rows: 64px 224px 24px;
-		gap: 40px;
+		display: flex;
+		flex-direction: column;
+		width: 445px;
+	}
+	.share-text h2 {
+		margin-bottom: 40px;
+	}
+	.share-text span {
+		margin-bottom: 40px;
 	}
 	.share-img {
 		justify-self: end;
 		width: 584px;
 		height: 392px;
 	}
-	h2 {
-		padding-bottom: 40px;
-	}
+
 	.start-link span {
 		color: #5e20a4;
 		text-decoration: underline;
@@ -41,6 +44,47 @@ const ShareStyle = styled.section`
 		color: #5e20a4;
 		text-decoration: underline;
 		text-decoration-color: #5e20a4;
+	}
+
+	@media screen and (max-width: 1000px) {
+		height: auto;
+
+		.share-content {
+			width: 360px;
+			margin-top: 0px;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 270px 1fr;
+			grid-template-areas:
+				' share-img'
+				' share-text ';
+		}
+		.share-text {
+			grid-area: share-text;
+			justify-self: center;
+			width: 328px;
+			margin-left: 16px;
+			margin-right: 16px;
+			text-align: center;
+		}
+		.share-img {
+			grid-area: share-img;
+			margin-top: 64px;
+			justify-self: center;
+			width: 304px;
+			height: 204px;
+		}
+		.share-text h2 {
+			font-size: 22px;
+			margin-top: 24px;
+			margin-bottom: 16px;
+		}
+		.share-text span {
+			margin-bottom: 24px;
+		}
+		.start-link {
+			margin-bottom: 64px;
+		}
 	}
 `;
 

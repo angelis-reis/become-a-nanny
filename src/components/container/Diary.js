@@ -6,6 +6,7 @@ const DiaryStyle = styled.section`
 	height: 508px;
 	background: #f2f2f2;
 	display: grid;
+	grid-template-rows: 2px 1fr;
 	justify-items: center;
 
 	.diary-content {
@@ -23,11 +24,39 @@ const DiaryStyle = styled.section`
 		width: 784px;
 		margin-top: 40px;
 	}
+	.divider {
+		width: 784px;
+		border-top: solid 2px #dfdfdf;
+	}
+
+	@media screen and (max-width: 1000px) {
+		height: 524px;
+
+		.divider {
+			width: 328px;
+		}
+
+		.diary-content {
+			margin-top: 64px;
+			width: 360px;
+		}
+		h2 {
+			font-size: 22px;
+			margin-top: 24px;
+		}
+		.Diary-text {
+			width: 328px;
+			margin-top: 16px;
+			margin-left: 16px;
+			margin-right: 16px;
+		}
+	}
 `;
 
 function Diary() {
 	return (
 		<DiaryStyle>
+			<span className='divider' />
 			<div className='diary-content'>
 				<img src={ImgSect5} alt='Nanny Share Diary' />
 				<h2>Coming soon: Nanny Share Daily Diary! </h2>

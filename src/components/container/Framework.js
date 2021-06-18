@@ -8,20 +8,12 @@ const FrameworkStyle = styled.section`
 	display: grid;
 	justify-items: center;
 
-	.divider {
-		width: 784px;
-		border-top: solid 2px #dfdfdf;
+	.framework-content {
+		text-align: center;
+		margin-top: 96px;
 	}
 	.framework-text {
 		width: 784px;
-	}
-	.framework-content {
-		text-align: center;
-	}
-	h2 {
-		margin-top: 96px;
-	}
-	p {
 		margin-top: 40px;
 		margin-bottom: 40px;
 	}
@@ -30,15 +22,40 @@ const FrameworkStyle = styled.section`
 		text-decoration: underline;
 		text-decoration-color: #5e20a4;
 	}
+
+	@media screen and (max-width: 1000px) {
+		height: 476px;
+
+		.framework-content {
+			width: 360px;
+			margin-top: 64px;
+		}
+		.framework-text {
+			width: 328px;
+			margin-left: 16px;
+			margin-right: 16px;
+			margin-top: 16px;
+			margin-bottom: 24px;
+		}
+		h2 {
+			font-size: 22px;
+			width: 245px;
+			margin-left: 60px;
+			margin-right: 60px;
+		}
+		.read-link span {
+			width: 328px;
+			margin-left: 16px;
+			margin-right: 16px;
+		}
+	}
 `;
 
 function Framework() {
 	return (
 		<FrameworkStyle>
 			<Router>
-
 				<div className='framework-content'>
-
 					<h2>A framework built for the long term </h2>
 					<p className='framework-text'>
 						Childcare is for the long term. And you need a framework
@@ -50,8 +67,7 @@ function Framework() {
 					</p>
 					<Link className='read-link' to='/bridget'>
 						<span>
-							Read how Bridget’s share (without Hapu) ended over
-							$15
+							Read how Hapu’s tribal background defines our app
 						</span>
 					</Link>
 				</div>

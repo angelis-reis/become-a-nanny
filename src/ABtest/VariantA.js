@@ -29,6 +29,29 @@ const VariantAStyle = styled.div`
 		font-size: 18px;
 		line-height: 24px;
 	}
+
+	@media screen and (max-width: 1000px) {
+		display: grid;
+		justify-items: center;
+
+		h1 {
+			margin-bottom: 16px;
+			font-size: 28px;
+			font-weight: 500;
+			line-height: 32px;
+			letter-spacing: 0;
+			text-align: center;
+			width: 272px;
+		}
+		h2 {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 28px;
+			text-align: center;
+			width: 288px;
+			margin-bottom: 66px;
+		}
+	}
 `;
 
 function VariantA(props) {

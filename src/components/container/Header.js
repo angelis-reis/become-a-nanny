@@ -51,6 +51,21 @@ const HeaderStyle = styled.div`
 		margin-left: 23px;
 		margin-top: 28px;
 	}
+
+	@media screen and (max-width: 1000px) {
+		.sign-in {
+			display: none;
+		}
+		.link1 {
+			display: none;
+		}
+		.link2 {
+			display: none;
+		}
+		.link3{
+			display: none;
+		}
+	}
 `;
 function Header() {
 	return (
@@ -60,13 +75,13 @@ function Header() {
 					<Link className='badge' to='/'>
 						<img src={Badge} alt='Badge' />
 					</Link>
-					<Link className='header-link' to='/nanny'>
+					<Link className='header-link link1' to='/nanny'>
 						<h5>Create Your Nanny Share</h5>
 					</Link>
-					<Link className='header-link' to='/shares'>
+					<Link className='header-link link2' to='/shares'>
 						<h5>Browse Shares</h5>
 					</Link>
-					<Link className='header-link' to='/story'>
+					<Link className='header-link link3' to='/story'>
 						<h5>Our Story</h5>
 					</Link>
 				</div>

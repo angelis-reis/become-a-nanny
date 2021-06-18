@@ -8,7 +8,7 @@ import {
 } from '@marvelapp/react-ab-test';
 import Mixpanel from 'mixpanel';
 import styled from 'styled-components';
-import ImgHeader from '../../images/ImageHeader.png';
+import ImgHero from '../../images/ImageHeader.png';
 import VariantA from '../../ABtest/VariantA';
 import VariantB from '../../ABtest/VariantB';
 import MixpanelToken from '../../sensitive/MixpanelToken';
@@ -44,29 +44,44 @@ const HeroStyle = styled.section`
 	object-fit: cover;
 	background-blend-mode: overlay;
 	background-size: cover;
-	left: 0px;
-	top: 0px;
-	border-radius: 0px;
 	place-self: center stretch;
 
 	.hero-content {
 		display: grid;
 		width: 1184px;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 300px;
 		color: #ffffff;
-		margin-top: 170px;
 	}
 	.hero-text {
-		place-self: center;
-		width: 560px;
+		margin-top: 200px;
 	}
-	.img-header {
-		place-self: end;
+	.img-hero {
 		width: 316px;
 		height: 290px;
-		padding-bottom: 20px;
 		margin-right: 100px;
+		margin-top: 170px;
+		justify-self: end;
+	}
+
+	@media screen and (max-width: 1000px) {
+		height: 540px;
+		background-position: left 756px bottom 0px ;
+
+
+		.hero-content {
+			display: grid;
+			width: 328px;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			color: #ffffff;
+			margin-top: 0px;
+		}
+		.hero-text {
+			margin-top: 152px;
+		}
+		.img-hero {
+			display: none;
+		}
 	}
 `;
 
@@ -90,8 +105,8 @@ const Hero = () => {
 						</Experiment>
 					</div>
 					<img
-						className='img-header'
-						src={ImgHeader}
+						className='img-hero'
+						src={ImgHero}
 						alt="Hapu's Console"
 					/>
 				</div>

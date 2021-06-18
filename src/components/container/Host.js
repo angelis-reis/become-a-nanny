@@ -73,6 +73,25 @@ const HostStyle = styled.section`
 		text-decoration: underline;
 		text-decoration-color: #5e20a4;
 	}
+
+	@media screen and (max-width: 1000px) {
+		height: 288px;
+
+		.host-content {
+			width: 360px;
+			margin-top: 40px;
+		}
+
+		h2 {
+			font-size: 22px;
+			margin-bottom: 0px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 28px;
+			margin-bottom: 24px;
+		}
+	}
 `;
 
 function Host() {

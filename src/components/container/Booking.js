@@ -19,6 +19,27 @@ const BookingStyle = styled.section`
 		text-decoration: underline;
 		text-decoration-color: #5e20a4;
 	}
+	@media screen and (max-width: 1000px) {
+		height: 216px;
+
+		flex-direction: column;
+
+		.profile-img {
+			margin-right: 0px;
+			margin-bottom: 16px;
+		}
+
+		.action-link {
+			text-align: center;
+			margin-bottom: 12px;
+			width: 212px;
+		}
+		h4 {
+			font-size: 14px;
+			line-height: 20px;
+			text-align: center;
+		}
+	}
 `;
 
 function Booking() {
@@ -31,7 +52,7 @@ function Booking() {
 					alt='User Profile'
 				/>
 				<Link className='action-link' to='/action'>
-					<span>See hapu in action (27 seconds)</span>
+					<span>Sarah’s day care available now in North Sydney</span>
 				</Link>
 				<h4>Wednesday, Thursday, Friday - 7:30 - 5:30</h4>
 			</Router>

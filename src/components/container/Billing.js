@@ -8,14 +8,12 @@ const BillingStyle = styled.section`
 	display: grid;
 	justify-items: center;
 
-	.divider {
-		width: 784px;
-		border-top: solid 2px #dfdfdf;
-		align-self: end;
-	}
 	img {
 		width: 984px;
 		height: 392px;
+	}
+	@media screen and (max-width: 1000px) {
+		display:none;
 	}
 `;
 
@@ -23,7 +21,6 @@ function Billing() {
 	return (
 		<BillingStyle>
 			<img src={ImgSect4} alt='Billing Dashboard' />
-			<span className='divider' />
 		</BillingStyle>
 	);
 }

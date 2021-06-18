@@ -60,6 +60,59 @@ const FooterStyle = styled.div`
 		color: #3d3d3d;
 		font-size: 12px;
 	}
+
+	.divider {
+		display: none;
+		width: 328px;
+		border-top: solid 1px #dfdfdf;
+	}
+
+	@media screen and (max-width: 1000px) {
+		height: 298px;
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 2px 1fr;
+
+		justify-items: center;
+
+		grid-template-areas:
+			' hapu-logo '
+			' footer-links '
+			' social-media '
+			' divider'
+			' copyright ';
+
+		.footer-links {
+			grid-area: footer-links;
+			display: flex;
+			/* justify-self: center; */
+			row-gap: 17px;
+			column-gap: 32px;
+			align-self: center;
+			width: 250px;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			margin-bottom: 24px;
+		}
+		.hapu-logo {
+			margin-left: 0px;
+			align-self: start;
+			margin-bottom: 32px;
+		}
+		.social-media {
+			margin-right: 0px;
+			align-self: center;
+			margin-bottom: 40px;
+		}
+		.divider {
+			grid-area: divider;
+			display: inherit;
+			margin-bottom: 24px;
+		}
+		.copyright {
+			margin-bottom: 24px;
+		}
+	}
 `;
 function Footer() {
 	return (
@@ -93,6 +146,7 @@ function Footer() {
 						<img src={InstagramIcon} alt='Instagram' />
 					</Link>
 				</div>
+				<p className='divider' />
 				<h5 className='copyright'>
 					Copyright © 2017 Hapu PTY Limited All rights reserved
 				</h5>
