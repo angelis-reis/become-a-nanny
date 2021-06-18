@@ -29,7 +29,7 @@ Application layout available in Figma:
 
 ---
 
-## Pré-requisites
+## Prerequisites
 
 Before you start, you need to install the following tools on your computer:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
