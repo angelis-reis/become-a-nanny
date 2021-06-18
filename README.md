@@ -3,13 +3,13 @@
 </h1>
 
 <p align="center">
- <a href="#-About">About</a> •
- <a href="#-Functionalities">Functionalities</a> •
+ <a href="#-about">About</a> •
+ <a href="#-functionalities">Functionalities</a> •
  <a href="#-layout">Layout</a> •
- <a href="#-Running-application">Running application</a> •
- <a href="#-Technology">Technology</a> •
- <a href="#-Author">Author</a> •
- <a href="#user-content--License">License</a>
+ <a href="#-running-application">Running application</a> •
+ <a href="#-technology">Technology</a> •
+ <a href="#-author">Author</a> •
+ <a href="#-license">License</a>
 </p>
 
 ## 💻 About the Project
