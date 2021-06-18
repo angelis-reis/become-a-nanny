@@ -20,7 +20,7 @@ const HeaderStyle = styled.div`
 		margin-right: 32px;
 		margin-top: 28px;
 	}
-	.badge {
+	.badge img {
 		width: 48px;
 		height: 64px;
 		margin-left: 20px;
